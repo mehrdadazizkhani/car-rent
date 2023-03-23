@@ -17,7 +17,9 @@ export default function Home() {
         ></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainLayout>salam</MainLayout>
+      <MainLayout>
+        <div className="bg-light-secondary">salam</div>
+      </MainLayout>
     </>
   );
 }
