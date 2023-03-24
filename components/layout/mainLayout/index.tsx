@@ -37,7 +37,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }): JSX.Element => {
           </div>
         </div>
       </header>
-      {children}
+      <section className="overflow-hidden bg-light-secondary">
+        <div className="mx-auto max-w-[1440px]">{children}</div>
+      </section>
       <Footer />
     </>
   );

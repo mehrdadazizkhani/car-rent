@@ -1,7 +1,6 @@
 import Head from "next/head";
 import MainLayout from "@/components/layout/mainLayout";
-import carsData from "../cars.js";
-import Image from "next/image";
+import PopularCars from "@/components/popularCars";
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <div className="h-96 bg-light-secondary"></div>
+        <PopularCars />
       </MainLayout>
     </>
   );
