@@ -17,7 +17,7 @@ module.exports = {
         heading: "#1A202C",
         content: "#596780",
         details: "#90A3BF",
-        error: "#B71112",
+        error: "#DB2719",
       },
     },
     extend: {},

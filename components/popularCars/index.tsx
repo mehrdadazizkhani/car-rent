@@ -1,9 +1,10 @@
 import React from "react";
-import carsData from "../../cars";
-import CarCard from "../carCard";
+import CarCard from "../carCard/defaultCard";
 
-interface PopularCarsProps extends React.PropsWithChildren {}
-const PopularCars: React.FC<PopularCarsProps> = (): JSX.Element => {
+interface PopularCarsProps extends React.PropsWithChildren {
+  cars: any[];
+}
+const PopularCars: React.FC<PopularCarsProps> = ({ cars }): JSX.Element => {
   return (
     <section className="flex w-full flex-col gap-5 py-4 px-6 md:px-[60px]">
       <div className="flex justify-between">
@@ -14,7 +15,7 @@ const PopularCars: React.FC<PopularCarsProps> = (): JSX.Element => {
       </div>
       <div className="flex w-full overflow-x-scroll scrollbar-none">
         <div className="flex w-fit gap-8">
-          {carsData.map((item) => {
+          {cars.map((item: any) => {
             return <CarCard data={item} />;
           })}
         </div>

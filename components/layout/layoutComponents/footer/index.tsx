@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = (): JSX.Element => {
         <hr className="hidden border-light-secondary lg:block" />
         <div className="flex flex-col-reverse justify-between gap-8 text-xs font-bold lg:flex-row">
           <p>©2022 MORENT. All rights reserved</p>
-          <div className="flex justify-between gap-[60]">
+          <div className="flex justify-between gap-[60px]">
             <p className="cursor-pointer">Privacy & Policy</p>
             <p className="cursor-pointer">Terms & Condition</p>
           </div>

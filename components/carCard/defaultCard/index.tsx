@@ -3,8 +3,8 @@ import Image, { StaticImageData } from "next/image";
 import { BsFuelPumpFill } from "react-icons/bs";
 import { GiSteeringWheel } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
-import { FaRegHeart } from "react-icons/fa";
-import Button from "../base/button";
+import Button from "../../base/button";
+import CardLikeBtn from "../cardLikeBtn";
 
 interface CarCardProps extends React.PropsWithChildren {
   data: {
@@ -27,11 +27,11 @@ const CarCard: React.FC<CarCardProps> = ({ data }): JSX.Element => {
       <div className="w-full">
         <div className="flex w-full items-center justify-between">
           <h2 className="text-xl font-bold text-light-heading">{data.name}</h2>
-          <FaRegHeart />
+          <CardLikeBtn />
         </div>
         <span className="text-sm text-light-details">{data.type}</span>
       </div>
-      <Image src={data.image} alt={data.name} width="224" />
+      <Image src={data.image} alt={data.name} width="224" height="10" />
       <div className="flex w-full flex-col gap-6">
         <div className="flex w-full justify-between text-light-details">
           <div className="flex items-center gap-1">

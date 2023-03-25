@@ -1,8 +1,10 @@
 import Head from "next/head";
+import Image from "next/image";
 import MainLayout from "@/components/layout/mainLayout";
 import PopularCars from "@/components/popularCars";
 
-export default function Home() {
+export default function Home({ cars }: any) {
+  console.log(cars);
   return (
     <>
       <Head>
@@ -12,8 +14,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <PopularCars />
+        <PopularCars cars={cars} />
       </MainLayout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:8000/cars");
+  const cars = await res.json();
+
+  return {
+    props: {
+      cars,
+    },
+  };
 }
