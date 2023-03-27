@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import MainLayout from "@/components/layout/mainLayout";
 import PopularCars from "@/components/popularCars";
+import React from "react";
+import PickDrop from "@/components/pickDropComponent";
 
 export default function Home({ cars }: any) {
-  console.log(cars);
   return (
     <>
       <Head>
@@ -14,6 +14,7 @@ export default function Home({ cars }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
+        <PickDrop />
         <PopularCars cars={cars} />
       </MainLayout>
     </>

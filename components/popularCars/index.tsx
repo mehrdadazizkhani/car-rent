@@ -16,7 +16,7 @@ const PopularCars: React.FC<PopularCarsProps> = ({ cars }): JSX.Element => {
       <div className="flex w-full overflow-x-scroll scrollbar-none">
         <div className="flex w-fit gap-8">
           {cars.map((item: any) => {
-            return <CarCard data={item} />;
+            return <CarCard data={item} key={item.id} />;
           })}
         </div>
       </div>

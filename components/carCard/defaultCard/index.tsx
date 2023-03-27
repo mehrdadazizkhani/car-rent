@@ -5,14 +5,15 @@ import { GiSteeringWheel } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
 import Button from "../../base/button";
 import CardLikeBtn from "../cardLikeBtn";
+import { Url } from "next/dist/shared/lib/router/router";
 
 interface CarCardProps extends React.PropsWithChildren {
   data: {
     id: number;
     name: string;
     type: string;
-    image: StaticImageData;
-    views: [StaticImageData, StaticImageData];
+    image: string;
+    views: [string, string];
     description: string;
     capacity: number;
     steering: string;
@@ -31,7 +32,13 @@ const CarCard: React.FC<CarCardProps> = ({ data }): JSX.Element => {
         </div>
         <span className="text-sm text-light-details">{data.type}</span>
       </div>
-      <Image src={data.image} alt={data.name} width="224" height="10" />
+      <Image
+        src={data.image}
+        alt={data.name}
+        width="224"
+        height="10"
+        className="h-auto w-[224px]"
+      />
       <div className="flex w-full flex-col gap-6">
         <div className="flex w-full justify-between text-light-details">
           <div className="flex items-center gap-1">
