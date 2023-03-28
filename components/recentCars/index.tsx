@@ -1,14 +1,14 @@
 import React from "react";
 import CarCard from "../carCard/defaultCard";
 
-interface PopularCarsProps extends React.PropsWithChildren {
+interface RecentCarsProps extends React.PropsWithChildren {
   cars: any[];
 }
-const PopularCars: React.FC<PopularCarsProps> = ({ cars }): JSX.Element => {
+const RecentCars: React.FC<RecentCarsProps> = ({ cars }): JSX.Element => {
   return (
     <section className="flex w-full flex-col gap-5 py-4">
       <div className="flex justify-between">
-        <h3 className="text-light-details">Popular Cars</h3>
+        <h3 className="text-light-details">Recent Cars</h3>
         <p className="cursor-pointer font-semibold text-light-accent">
           View All
         </p>
@@ -24,4 +24,4 @@ const PopularCars: React.FC<PopularCarsProps> = ({ cars }): JSX.Element => {
   );
 };
 
-export default PopularCars;
+export default RecentCars;

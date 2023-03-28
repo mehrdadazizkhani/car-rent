@@ -18,6 +18,7 @@ module.exports = {
         content: "#596780",
         details: "#90A3BF",
         error: "#DB2719",
+        warning: "#FBAD39",
       },
     },
     extend: {},

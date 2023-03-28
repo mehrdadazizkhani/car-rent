@@ -1,11 +1,11 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { BsFuelPumpFill } from "react-icons/bs";
 import { GiSteeringWheel } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
 import Button from "../../base/button";
 import CardLikeBtn from "../cardLikeBtn";
-import { Url } from "next/dist/shared/lib/router/router";
+import Link from "next/link";
 
 interface CarCardProps extends React.PropsWithChildren {
   data: {
@@ -27,7 +27,11 @@ const CarCard: React.FC<CarCardProps> = ({ data }): JSX.Element => {
     <div className="flex h-[388px] w-[300px] flex-col items-center justify-between rounded-[10px] bg-light-primary p-6">
       <div className="w-full">
         <div className="flex w-full items-center justify-between">
-          <h2 className="text-xl font-bold text-light-heading">{data.name}</h2>
+          <Link href={`/carDetail/${data.id}`}>
+            <h2 className="text-xl font-bold text-light-heading">
+              {data.name}
+            </h2>
+          </Link>
           <CardLikeBtn />
         </div>
         <span className="text-sm text-light-details">{data.type}</span>
