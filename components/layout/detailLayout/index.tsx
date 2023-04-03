@@ -6,6 +6,7 @@ import User from "../layoutComponents/user";
 import Notification from "../layoutComponents/notification";
 import Like from "../layoutComponents/like";
 import DarkModeToggle from "../layoutComponents/darkModeToggle";
+import Link from "next/link";
 interface CarDetailLayoutProps extends React.PropsWithChildren {}
 const CarDetailLayout: React.FC<CarDetailLayoutProps> = ({
   children,
@@ -16,9 +17,11 @@ const CarDetailLayout: React.FC<CarDetailLayoutProps> = ({
         <div className="mx-auto flex h-full w-full flex-col items-center justify-between py-8 px-6 lg:max-w-[1440px] lg:flex-row lg:py-10 lg:px-[60px]">
           <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:gap-16">
             <div className="flex h-full w-full flex-col-reverse justify-between lg:w-fit">
-              <h1 className="text-2xl font-bold text-light-accent dark:text-dark-accent">
-                MORENT
-              </h1>
+              <Link href={"/"}>
+                <h1 className="text-2xl font-bold text-light-accent dark:text-dark-accent">
+                  MORENT
+                </h1>
+              </Link>
               <div className="flex h-full w-full justify-between lg:hidden">
                 <div className="flex h-5 w-8 flex-col justify-between">
                   <div className="h-0.5 w-full bg-light-content dark:bg-dark-content"></div>

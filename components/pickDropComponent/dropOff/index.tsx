@@ -20,7 +20,7 @@ const DropOff: React.FC<DropOffProps> = ({ enable }): JSX.Element => {
         <TimePicker />
       </div>
       {!enable && (
-        <div className="dark:bg-dark-secondarys absolute top-0 left-0 h-full w-full rounded-[10px] bg-light-secondary opacity-50"></div>
+        <div className="absolute top-0 left-0 h-full w-full rounded-[10px] bg-light-secondary opacity-60 dark:bg-dark-secondary"></div>
       )}
     </div>
   );
