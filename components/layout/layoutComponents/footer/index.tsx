@@ -7,7 +7,7 @@ const Footer: React.FC<FooterProps> = (): JSX.Element => {
       <div className="mx-auto flex h-full max-w-[1440px] flex-col gap-12 py-8 px-6 lg:py-10 lg:px-[60px]">
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl font-bold text-light-accent lg:text-3xl">
+            <h1 className="text-2xl font-bold text-light-accent dark:text-dark-accent lg:text-3xl">
               MORENT
             </h1>
             <p className="w-72 text-xs text-light-content dark:text-dark-content lg:text-base">

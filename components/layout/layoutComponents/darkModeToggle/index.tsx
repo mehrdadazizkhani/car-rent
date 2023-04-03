@@ -32,11 +32,7 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <div
-      onClick={handleToggle}
-      className="flex aspect-square w-11 cursor-pointer items-center justify-center rounded-full border border-light-secondary text-light-content
-"
-    >
+    <div onClick={handleToggle} className="circle-btn">
       {toggle ? <MdDarkMode /> : <MdLightMode />}
     </div>
   );

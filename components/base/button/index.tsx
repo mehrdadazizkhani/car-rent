@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({ title, to, onClick }): JSX.Element => {
     <Link
       onClick={onClick}
       href={to}
-      className="block w-fit rounded bg-light-accent py-[10px] px-5 font-semibold text-light-primary"
+      className="block w-fit rounded bg-light-accent py-[10px] px-5 font-semibold text-light-primary dark:bg-dark-accent dark:text-dark-primary"
     >
       {title}
     </Link>

@@ -16,7 +16,7 @@ const PickDrop: React.FC<PickDropProps> = (): JSX.Element => {
       <PickUp />
       <div
         onClick={handleSwitch}
-        className="absolute top-[calc(50%-28px)] z-10 flex aspect-square h-14 cursor-pointer items-center justify-center rounded-[10px] bg-light-accent text-lg text-light-primary lg:relative"
+        className="absolute top-[calc(50%-28px)] z-10 flex aspect-square h-14 cursor-pointer items-center justify-center rounded-[10px] bg-light-accent text-lg text-light-primary dark:bg-dark-accent dark:text-dark-primary lg:relative"
       >
         {same ? <TbArrowGuide /> : <TbArrowsSort />}
       </div>

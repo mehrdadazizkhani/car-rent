@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .circle-btn {
+    @apply flex aspect-square w-11 cursor-pointer items-center justify-center rounded-full border border-light-secondary text-light-content transition-all duration-300 hover:bg-light-secondary dark:border-dark-secondary dark:text-dark-content dark:hover:bg-dark-secondary;
+  }
+}

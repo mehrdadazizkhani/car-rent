@@ -11,7 +11,11 @@ const CardLikeBtn: React.FC<CardLikeBtnProps> = (): JSX.Element => {
 
   return (
     <div className="cursor-pointer" onClick={likeHandler}>
-      {like ? <FaHeart className="text-light-error" /> : <FaRegHeart />}
+      {like ? (
+        <FaHeart className="text-light-error" />
+      ) : (
+        <FaRegHeart className="text-light-details dark:text-dark-details" />
+      )}
     </div>
   );
 };
