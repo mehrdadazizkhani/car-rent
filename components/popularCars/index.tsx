@@ -8,8 +8,10 @@ const PopularCars: React.FC<PopularCarsProps> = ({ cars }): JSX.Element => {
   return (
     <section className="flex w-full flex-col gap-5 py-4">
       <div className="flex justify-between">
-        <h3 className="text-light-details">Popular Cars</h3>
-        <p className="cursor-pointer font-semibold text-light-accent">
+        <h3 className="text-light-details dark:text-dark-details">
+          Popular Cars
+        </h3>
+        <p className="cursor-pointer font-semibold text-light-accent dark:text-dark-accent">
           View All
         </p>
       </div>
