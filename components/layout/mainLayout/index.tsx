@@ -5,6 +5,7 @@ import Setting from "../layoutComponents/setting";
 import User from "../layoutComponents/user";
 import Notification from "../layoutComponents/notification";
 import Like from "../layoutComponents/like";
+import DarkModeToggle from "../layoutComponents/darkModeToggle";
 interface MainLayoutProps extends React.PropsWithChildren {}
 const MainLayout: React.FC<MainLayoutProps> = ({ children }): JSX.Element => {
   return (
@@ -33,6 +34,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }): JSX.Element => {
               <Notification />
               <Setting />
             </div>
+            <DarkModeToggle />
             <User />
           </div>
         </div>

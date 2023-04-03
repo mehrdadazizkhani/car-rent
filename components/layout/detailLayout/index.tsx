@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import Footer from "../layoutComponents/footer";
 import SearchBar from "../layoutComponents/searchBar";
 import Setting from "../layoutComponents/setting";
