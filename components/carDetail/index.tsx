@@ -5,7 +5,7 @@ import CarDetailCard from "./carDetailCard";
 import CarGallery from "./carGallery";
 
 interface CarDetailProps extends React.PropsWithChildren {
-  carID: string | undefined | string[];
+  carID: string | string[];
   data: any[];
 }
 const CarDetail: React.FC<CarDetailProps> = ({ carID, data }): JSX.Element => {

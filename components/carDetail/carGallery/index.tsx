@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface CarGalleryProps extends React.PropsWithChildren {
   carID: string | string[];
@@ -39,7 +39,10 @@ const CarGallery: React.FC<CarGalleryProps> = ({
 
         {car.views.map((view: string, index: number) => {
           return (
-            <img
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
               key={index}
               src={view}
               alt={car.name}
@@ -60,10 +63,12 @@ const CarGallery: React.FC<CarGalleryProps> = ({
           </div>
           {car.views.map((view: string, index: number) => {
             return (
-              <div className="h-28 w-[150px]">
-                <img
+              <div key={index} className="h-28 w-[150px]">
+                <Image
+                  width="0"
+                  height="0"
+                  sizes="100vw"
                   onClick={() => handleSlide(index + 1)}
-                  key={index}
                   src={view}
                   alt={car.name}
                   className="h-full w-full cursor-pointer rounded-[10px] object-cover object-center"
