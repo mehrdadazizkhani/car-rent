@@ -2,14 +2,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 interface CarGalleryProps extends React.PropsWithChildren {
-  carID: string | string[];
+  carID: string | string[] | undefined;
   data: any[];
 }
 const CarGallery: React.FC<CarGalleryProps> = ({
   carID,
   data,
 }): JSX.Element => {
-  const car = data[+carID - 1];
+  const car = typeof carID === "string" && data[+carID - 1];
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleFirstSlide = () => {

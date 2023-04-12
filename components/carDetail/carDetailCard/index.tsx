@@ -3,14 +3,14 @@ import CardLikeBtn from "@/components/carCard/cardLikeBtn";
 import Rating from "@/components/rating";
 
 interface CarDetailCardProps extends React.PropsWithChildren {
-  carID: string | string[];
+  carID: string | string[] | undefined;
   data: any[];
 }
 const CarDetailCard: React.FC<CarDetailCardProps> = ({
   carID,
   data,
 }): JSX.Element => {
-  const car = data[+carID - 1];
+  const car = typeof carID === "string" && data[+carID - 1];
 
   return (
     <div className="flex w-full flex-col justify-between gap-9 rounded-[10px] bg-light-primary p-6 text-light-content dark:bg-dark-primary dark:text-dark-content">
