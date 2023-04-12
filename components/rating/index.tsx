@@ -10,11 +10,11 @@ const Rating: React.FC<RatingProps> = (): JSX.Element => {
   };
   return (
     <div className="flex">
-      {array.map((item, index) => {
+      {array.map((item) => {
         if (item > rate) {
           return (
             <AiOutlineStar
-              key={index}
+              key={item}
               className="cursor-pointer text-light-details dark:text-dark-details"
               onClick={() => handleRate(item)}
             />
@@ -22,6 +22,7 @@ const Rating: React.FC<RatingProps> = (): JSX.Element => {
         } else {
           return (
             <AiFillStar
+              key={item}
               onClick={() => handleRate(item)}
               className="cursor-pointer text-light-warning dark:text-dark-warning"
             />
