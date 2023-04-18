@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "server": "json-server --watch db.json --port 8000",
+    "json-server": "json-server db.json --watch",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "json-server db.json & next build",
+    "start": "json-server db.json & next start",
     "lint": "next lint"
   },
   "dependencies": {

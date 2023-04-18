@@ -59,7 +59,14 @@ const CarGallery: React.FC<CarGalleryProps> = ({
             onClick={handleFirstSlide}
             className="flex h-full w-[150px] cursor-pointer items-center justify-center rounded-[10px] bg-light-accent/70"
           >
-            <img src={car.image} alt={car.name} className="w-28" />
+            <Image
+              src={car.image}
+              alt={car.name}
+              className="h-auto w-28"
+              width="0"
+              height="0"
+              sizes="100vw"
+            />
           </div>
           {car.views.map((view: string, index: number) => {
             return (

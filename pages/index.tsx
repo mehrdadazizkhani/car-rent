@@ -22,7 +22,7 @@ export default function Home({ cars }: any) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:8000/cars");
+  const res = await fetch("http://localhost:3000/cars");
   const cars = await res.json();
 
   return {

@@ -33,7 +33,7 @@ const CarDetailPage = ({ cars }: Props) => {
 export default CarDetailPage;
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:8000/cars");
+  const res = await fetch("http://localhost:3000/cars");
   const cars = await res.json();
 
   return {
