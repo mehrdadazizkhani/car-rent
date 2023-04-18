@@ -3,7 +3,7 @@ import Button from "../base/button";
 interface FiltersProps extends React.PropsWithChildren {}
 const Filters: React.FC<FiltersProps> = (): JSX.Element => {
   return (
-    <aside className="hidden h-full w-full flex-col gap-14 bg-light-primary p-8 dark:bg-dark-primary lg:flex">
+    <aside className="hidden h-full w-full flex-col gap-14 border-r-2 border-light-primary p-8 dark:border-dark-primary lg:flex">
       <div className="flex flex-col gap-7">
         <span className="text-xs text-light-details dark:text-dark-details">
           TYPE

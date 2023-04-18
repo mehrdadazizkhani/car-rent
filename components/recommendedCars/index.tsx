@@ -1,12 +1,8 @@
 import React from "react";
 import CarCard from "../carCard/defaultCard";
+import { Cars } from "@/pages";
 
-interface RecommendedCarsProps extends React.PropsWithChildren {
-  cars: any[];
-}
-const RecommendedCars: React.FC<RecommendedCarsProps> = ({
-  cars,
-}): JSX.Element => {
+const RecommendedCars = ({ cars }: Cars) => {
   return (
     <section className="flex w-full flex-col gap-5 py-4">
       <div className="flex justify-between">
