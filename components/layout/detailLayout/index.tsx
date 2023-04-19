@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Footer from "../layoutComponents/footer";
 import SearchBar from "../layoutComponents/searchBar";
 import Setting from "../layoutComponents/setting";
@@ -7,10 +7,12 @@ import Notification from "../layoutComponents/notification";
 import Like from "../layoutComponents/like";
 import DarkModeToggle from "../layoutComponents/darkModeToggle";
 import Link from "next/link";
-interface CarDetailLayoutProps extends React.PropsWithChildren {}
-const CarDetailLayout: React.FC<CarDetailLayoutProps> = ({
-  children,
-}): JSX.Element => {
+
+interface Props {
+  children?: ReactNode;
+}
+
+const CarDetailLayout = ({ children }: Props) => {
   return (
     <>
       <header className="w-full bg-light-primary dark:bg-dark-primary">

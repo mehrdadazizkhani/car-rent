@@ -3,26 +3,25 @@ import MainLayout from "@/components/layout/mainLayout";
 import PopularCars from "@/components/popularCars";
 import React from "react";
 import PickDrop from "@/components/pickDropComponent";
-
-export interface Cars {
-  cars: [
-    {
-      id: number;
-      name: string;
-      type: string;
-      image: string;
-      views: string[];
-      description: string;
-      capacity: number;
-      steering: string;
-      fuel: number;
-      price: number;
-      newPrice: number;
-    }
-  ];
+export interface Car {
+  id: number;
+  name: string;
+  type: string;
+  image: string;
+  views: string[];
+  description: string;
+  capacity: number;
+  steering: string;
+  fuel: number;
+  price: number;
+  newPrice: number;
 }
 
-export default function Home({ cars }: any) {
+export interface Cars {
+  cars: Car[];
+}
+
+export default function Home({ cars }: Cars) {
   return (
     <>
       <Head>
@@ -40,7 +39,7 @@ export default function Home({ cars }: any) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/cars");
+  const res = await fetch("http://localhost:3000/api/db/cars");
   const cars = await res.json();
 
   return {

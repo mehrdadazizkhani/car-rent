@@ -1,17 +1,13 @@
 import Button from "@/components/base/button";
 import CardLikeBtn from "@/components/carCard/cardLikeBtn";
 import Rating from "@/components/rating";
+import { Car } from "@/pages";
 
-interface CarDetailCardProps extends React.PropsWithChildren {
-  carID: string | string[] | undefined;
-  data: any[];
+interface Props {
+  car: Car;
 }
-const CarDetailCard: React.FC<CarDetailCardProps> = ({
-  carID,
-  data,
-}): JSX.Element => {
-  const car = typeof carID === "string" && data[+carID - 1];
 
+const CarDetailCard = ({ car }: Props) => {
   return (
     <div className="flex w-full flex-col justify-between gap-9 rounded-[10px] bg-light-primary p-6 text-light-content dark:bg-dark-primary dark:text-dark-content">
       <div className="flex flex-col gap-[10px]">

@@ -1,15 +1,12 @@
+import { Car } from "@/pages";
 import Image from "next/image";
 import { useState } from "react";
 
-interface CarGalleryProps extends React.PropsWithChildren {
-  carID: string | string[] | undefined;
-  data: any[];
+interface Props {
+  car: Car;
 }
-const CarGallery: React.FC<CarGalleryProps> = ({
-  carID,
-  data,
-}): JSX.Element => {
-  const car = typeof carID === "string" && data[+carID - 1];
+
+const CarGallery = ({ car }: Props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleFirstSlide = () => {

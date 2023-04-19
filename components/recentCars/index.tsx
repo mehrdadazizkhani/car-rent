@@ -1,10 +1,8 @@
 import React from "react";
 import CarCard from "../carCard/defaultCard";
+import { Cars } from "@/pages";
 
-interface RecentCarsProps extends React.PropsWithChildren {
-  cars: any[];
-}
-const RecentCars: React.FC<RecentCarsProps> = ({ cars }): JSX.Element => {
+const RecentCars = ({ cars }: Cars) => {
   return (
     <section className="flex w-full flex-col gap-5 py-4">
       <div className="flex justify-between">

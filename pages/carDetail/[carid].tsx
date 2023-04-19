@@ -1,32 +1,15 @@
 import CarDetail from "@/components/carDetail";
 import CarDetailLayout from "@/components/layout/detailLayout";
-import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
+import { Car, Cars } from "..";
 
-interface Cars {
-  id: number;
-  name: string;
-  type: string;
-  image: string;
-  views: string[];
-  description: string;
-  capacity: number;
-  steering: string;
-  fuel: number;
-  price: number;
-  newPrice: number;
-}
-
-interface Props {
-  cars: Cars[];
-}
-
-const CarDetailPage = ({ cars }: Props) => {
+const CarDetailPage = ({ cars }: Cars) => {
   const router = useRouter();
-  const carID = router.query.carid;
+  const carID: number =
+    router.query.carid !== undefined ? +router.query.carid : 1;
   return (
     <CarDetailLayout>
-      <CarDetail data={cars} carID={carID} />
+      <CarDetail cars={cars} carID={carID - 1} />
     </CarDetailLayout>
   );
 };
@@ -34,7 +17,7 @@ const CarDetailPage = ({ cars }: Props) => {
 export default CarDetailPage;
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/cars");
+  const res = await fetch("http://localhost:3000/api/db/cars");
   const cars = await res.json();
 
   return {
